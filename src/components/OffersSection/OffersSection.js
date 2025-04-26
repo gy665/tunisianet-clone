@@ -1,4 +1,4 @@
-/* // OffersSection.js
+// OffersSection.js
 import React from 'react';
 import './OffersSection.css';
 
@@ -17,4 +17,4 @@ function OffersSection() {
     </section>
   );
 }
-export default OffersSection;*/
+export default OffersSection;
