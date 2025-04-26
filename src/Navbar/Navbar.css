@@ -1,25 +1,136 @@
-.navbar {
-  background-color: #0066cc;
-  padding: 10px 0;
+/* Main Container - CHANGED */
+.category-navbar {
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  justify-content: center; /* Add this line */
 }
 
-.navbar-list {
+/* Nav Container - CHANGED */
+.nav-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Main Categories - CHANGED */
+.main-categories {
+  display: flex;
   list-style: none;
+  margin: 0 auto; /* Changed from 0 to auto */
+  padding: 0;
+  height: 40px;
+  justify-content: center; /* Add this line */
+}
+.main-categories li {
+  position: relative;
+  padding: 0 15px;
+}
+
+.category-name {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  color: #333;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.main-categories li:hover .category-name {
+  color: #4a90e2;
+}
+
+/* Mega Menu */
+/* Replace your .mega-menu-container with this: */
+.mega-menu-container {
+  position: fixed; /* Changed from absolute */
+  left: 0;
+  right: 0; /* Add this */
+  width: 100%; /* Changed from 100vw */
   display: flex;
   justify-content: center;
-  gap: 30px;
-  margin: 0;
+  background: white; /* Add background here */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Move shadow here */
+  z-index: 1000;
+}
+
+/* Update .mega-menu to remove duplicate styles */
+.mega-menu {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  display: flex;
+  gap: 40px;
+  /* Remove background and shadow from here */
+}
+
+.menu-column {
+  flex: 1;
+  min-width: 0; /* Allows text wrapping */
+}
+
+.menu-column h4 {
+  color: #2a5ea7;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.menu-column ul {
+  list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.navbar-list li {
-  color: white;
+.menu-item {
+  background: none;
+  border: none;
+  padding: 8px 0;
+  width: 100%;
+  text-align: left;
   cursor: pointer;
-  font-weight: bold;
-  transition: color 0.3s;
-  font-size: 16px;
 }
 
-.navbar-list li:hover {
-  color: #ffcc00;
+.menu-item-text {
+  display: inline-block;
+  color: #333;
+  font-size: 13px;
+  transition: all 0.2s;
+  white-space: normal; /* Allows text wrapping */
+  word-break: break-word; /* Prevents overflow */
+  text-align: left;
+  width: 100%;
+}
+
+.menu-item:hover .menu-item-text {
+  color: #2a5ea7;
+  padding-left: 5px;
+}
+
+.menu-item-text::before {
+  content: "→";
+  color: #2a5ea7;
+  margin-right: 8px;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.menu-item:hover .menu-item-text::before {
+  opacity: 1;
+  margin-right: 12px;
+}
+
+
+
+.category-name, .menu-item {
+  cursor: default; /* Or use 'pointer' for link-like behavior */
+}
+.main-categories li:hover {
+  cursor: pointer;
 }
