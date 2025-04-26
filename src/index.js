@@ -4,6 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+
+// Add Material Icons
+const materialIcons = document.createElement('link');
+materialIcons.href = 'https://fonts.googleapis.com/icon?family=Material+Icons';
+materialIcons.rel = 'stylesheet';
+document.head.appendChild(materialIcons);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

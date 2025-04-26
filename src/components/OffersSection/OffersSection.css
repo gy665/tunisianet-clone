@@ -1,0 +1,44 @@
+/* OffersSection.css */
+.offers-section {
+    background: white;
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .section-header {
+    background: #ff6b00;
+    color: white;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+  }
+  
+  .section-header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  .product-card {
+    border: 1px solid #eee;
+    padding: 20px;
+    position: relative;
+    border-radius: 4px;
+  }
+  
+  .installment-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #0056b3;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+  }
+  
+  .monthly-price {
+    color: #ff6b00;
+    font-weight: bold;
+    margin-top: 10px;
+  }

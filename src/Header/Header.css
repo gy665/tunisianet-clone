@@ -1,0 +1,93 @@
+.header {
+  background-color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Left Section - Logo */
+.header_left {
+  width: 120px;
+}
+
+.header_logo {
+  width:80px;
+  height: 40px;
+}
+
+
+
+/* Middle Section - Catalogue + Search */
+.header_middle {
+  display: flex;
+  flex: 1;
+  margin: 0 20px;
+  max-width: 600px;
+  align-items: center;
+}
+
+/* Catalogue Styles */
+.header_catalogue {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  cursor: pointer;
+  background-color: #f8f8f8;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.dropdown_icon {
+  font-size: 12px;
+}
+
+/* Search Container Styles */
+.header_search_container {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+.header_search {
+  width: 100%;
+  padding: 10px 40px 10px 15px;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  outline: none;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.search_icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+  font-size: 18px;
+}
+
+/* Hover effects */
+.header_catalogue:hover,
+.search_icon:hover {
+  background-color: #f0f0f0;
+}
+
+/* Right Section - Icons */
+.header_right {
+  display: flex;
+  gap: 20px;
+}
+
+.header_icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: #0066cc;
+}
