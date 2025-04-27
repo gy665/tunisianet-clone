@@ -27,32 +27,21 @@ const Header = () => {
             className="search_input" 
           />
           <button className="search_button">
-            <span className="search_icon">🔍</span>
+          <i class="fas fa-search"></i>
           </button>
         </div>
       </div>
       
       <div className="header_right">
         <div className="icon_container">
-          <img 
-            src="https://img.icons8.com/color/512/settings--v2.png" 
-            alt="Settings" 
-            className="header_icon settings_icon" 
-          />
+        <i class="bi bi-gear"></i>
+
         </div>
         <div className="icon_container">
-          <img 
-            src="https://static-00.iconduck.com/assets.00/user-icon-2046x2048-9pwm22pp.png" 
-            alt="Account" 
-            className="header_icon user_icon" 
-          />
+        <i class="fa-regular fa-user"></i>
         </div>
         <div className="icon_container">
-          <img 
-            src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" 
-            alt="Cart" 
-            className="header_icon cart_icon" 
-          />
+        <i class="bi bi-bag"></i>
         </div>
 
       

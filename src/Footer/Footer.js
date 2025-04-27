@@ -118,8 +118,9 @@ const Footer = () => {
     {/* Column 4: Contact */}
     <div className="footer-column">
       <h3>CONTACT</h3>
+      
       <address>
-        Tunisianet<br />
+      Tunisianet<br />
         10 Rue Saint Augustin<br />
         1002 Tunis<br />
         Tunisia<br />

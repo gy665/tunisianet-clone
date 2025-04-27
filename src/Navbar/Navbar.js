@@ -5,11 +5,12 @@ const Navbar = () => {
   const [activeCategory, setActiveCategory] = useState(null);
 
   const categories = [
+    
     {
       name: "Informatique",
       columns: [
         {
-          title: "PC Portables",
+          title: "Ordinateur Portable",
           items: [
             "PC Portable Gaming",
             "PC Portable Bureautique",
@@ -19,7 +20,7 @@ const Navbar = () => {
           ]
         },
         {
-          title: "Accessoires",
+          title: "Accessoires et Périphériques",
           items: [
             "Sacs & Housses",
             "Chargeurs",
@@ -27,26 +28,38 @@ const Navbar = () => {
             "Station d'accueil",
             "Refroidisseurs"
           ]
+        },
+        {
+          title: "Ordinateur de Bureau",
+          items: [
+            "Étuis & Coques",
+            "Protections écran",
+            "Chargeurs sans fil",
+            "Power Banks",
+            "Kits mains libres"
+          ]
         }
+        
       ]
     },
     {
       name: "Téléphonie & Tablette",
       columns: [
         {
-          title: "Smartphones",
+          title: "Tablette tactile",
           items: [
-            "Android",
-            "iOS",
-            "Reconditionnés",
-            "5G",
-            "Entrée de Gamme"
+            "Tablette",
+            "Tablette Graphique",
+            "Etui de protection pour tablette",
+            "Chargeur et Câble pour tablette",
+            "Film de protection pour tablette",
+            "Divers pour tablette"
           ]
         },
         {
-          title: "Accessoires",
+          title: "Accessoires Téléphones",
           items: [
-            "Étuis & Coques",
+            "Etui de protection pour Téléphones",
             "Protections écran",
             "Chargeurs sans fil",
             "Power Banks",
@@ -56,7 +69,64 @@ const Navbar = () => {
       ]
     },
     {
-      name: "TV & Audio",
+      name: "Stockage",
+      columns: [
+        {
+          title: "Téléviseurs",
+          items: [
+            "4K UHD",
+            "Smart TV",
+            "OLED",
+            "TV Gaming",
+            "TV Murale"
+          ]
+        },
+        {
+          title: "Audio",
+          items: [
+            "Barres de son",
+            "Home Cinéma",
+            "Casques",
+            "Enceintes",
+            "Micros"
+          ]
+        }
+      ]
+    },
+    {
+      name: "Impression",
+      columns: [
+        {
+          title: "Imprimantes",
+          items: [
+            "Imprimante à réservoir intégré",
+            "Imprimante et Multifonction Jet d'encre",
+            "Imprimante et Multifonction Laser",
+            "Imprimante professionnelle",
+            "Imprimante point de vente"
+          ]
+        },
+        {
+          title: "Photocopieurs",
+          items: [
+            "Photocopieurs A4 | A3",
+            "Accessoires photocopieurs",
+            
+          ]
+        }
+        ,
+        {
+          title: "Papier",
+          items: [
+            "Papier A4",
+            "Papier A3",
+            "Enveloppe"
+            
+          ]
+        }
+      ]
+    },{
+      name: "TV-Son-Photos",
       columns: [
         {
           title: "Téléviseurs",
@@ -106,7 +176,7 @@ const Navbar = () => {
       ]
     },
     {
-      name: "Composants",
+      name: "Sécurité",
       columns: [
         {
           title: "Composants PC",
@@ -131,7 +201,7 @@ const Navbar = () => {
       ]
     },
     {
-      name: "Accessoires",
+      name: "Bureautique",
       columns: [
         {
           title: "Informatique",
@@ -156,7 +226,7 @@ const Navbar = () => {
       ]
     },
     {
-      name: "Promotions",
+      name: "Réseau & Connectiques",
       columns: [
         {
           title: "Offres spéciales",
@@ -186,6 +256,11 @@ const Navbar = () => {
     <nav className="category-navbar">
       <div className="nav-container">
         <ul className="main-categories">
+        <li className="climatisation-item">
+            <a href="/climatisation" className="climatisation-button">
+              Climatisation
+            </a>
+          </li>
           {categories.map((category, index) => (
             <li 
               key={index}

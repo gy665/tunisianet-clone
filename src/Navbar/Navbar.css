@@ -2,10 +2,14 @@
 .category-navbar {
   background: white;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  position: relative;
+  position: fixed;
   z-index: 1000;
   display: flex;
   justify-content: center; /* Add this line */
+  width: 100vw;
+  margin-top:70px ;
+  
+  
 }
 
 /* Nav Container - CHANGED */
@@ -14,6 +18,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  
 }
 
 /* Main Categories - CHANGED */
@@ -24,17 +29,19 @@
   padding: 0;
   height: 40px;
   justify-content: center; /* Add this line */
+  
 }
 .main-categories li {
   position: relative;
   padding: 0 15px;
+  
 }
 
 .category-name {
   display: flex;
   align-items: center;
   height: 40px;
-  color: #333;
+  color: #4a90e2;
   font-size: 14px;
   white-space: nowrap;
   transition: color 0.2s;
@@ -99,7 +106,7 @@
 
 .menu-item-text {
   display: inline-block;
-  color: #333;
+  color: #333333;
   font-size: 13px;
   transition: all 0.2s;
   white-space: normal; /* Allows text wrapping */
@@ -109,7 +116,7 @@
 }
 
 .menu-item:hover .menu-item-text {
-  color: #2a5ea7;
+  color: rgb(163, 163, 38);
   padding-left: 5px;
 }
 
@@ -133,4 +140,42 @@
 }
 .main-categories li:hover {
   cursor: pointer;
+}
+
+
+
+/* Climatisation Special Button */
+.climatisation-item {
+  margin-right: 15px;
+  display: flex;
+  align-items: center; /* Match navbar item alignment */
+  height: 40px; /* Match navbar height */
+}
+
+.climatisation-button {
+  display: flex;
+  align-items: center;
+  height: 30px; /* Slightly smaller than navbar height */
+  padding: 0 6px;
+  background-color: #ffeb3b;
+  color: #333;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  /* Add these to match text positioning */
+  line-height: 1;
+  margin-top: 5px; /* Adjust vertical alignment */
+  margin-bottom: 5px;
+}
+
+
+
+
+
+.climatisation-button:hover {
+  background-color: #1976d2; /* Blue */
+  color: white;
 }

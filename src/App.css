@@ -1,3 +1,17 @@
 .App {
   font-family: 'Arial', sans-serif;
 }
+/* Header Container */
+.header {
+  position: fixed;       /* Makes header stick to viewport */
+  top: 0;
+  z-index: 1000;
+  padding: 10px 20px;
+  
+  align-items: center;
+  justify-content: space-between;
+  
+  
+
+  
+}
