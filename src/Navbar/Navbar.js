@@ -179,13 +179,12 @@ const Navbar = () => {
       name: "Sécurité",
       columns: [
         {
-          title: "Composants PC",
+          title: "Système d'alarme",
           items: [
-            "Processeurs",
-            "Cartes graphiques",
-            "RAM",
-            "Cartes mères",
-            "SSD"
+            "Alarme Filaire",
+            "Alarme sans fil",
+            "Accessoires",
+            
           ]
         },
         {
@@ -204,23 +203,35 @@ const Navbar = () => {
       name: "Bureautique",
       columns: [
         {
-          title: "Informatique",
+          title: "Matériel point de vente",
           items: [
-            "Souris",
-            "Claviers",
-            "Casques",
-            "Tapis de souris",
-            "Hubs USB"
+            "Tiroirs Caisses et Coffres-forts",
+            "Caisses Enregistreuses",
+            "Douchettes",
+            "Destructeurs de papiers",
+            "Perforelieuses",
+            "Imprimante point de vente",
+            "Plastifieuses"
           ]
         },
         {
-          title: "Connectique",
+          title: "Ecriture & Correction",
           items: [
-            "Câbles HDMI",
-            "Adaptateurs",
-            "Chargeurs",
-            "Docks",
-            "Switchs réseau"
+            "Stylos à bille",
+            "Stylos premium",
+            "Stylos confort",
+            "Stylos Pointe Fine",
+            "Crayons & Porte-mines"
+          ]
+        },
+        {
+          title: "Classement & Archivage",
+          items: [
+            "Boîtes de classement",
+            "Chemises & Sous-chemises",
+            "Classeurs",
+            "Portes documents",
+            "Corbeilles à courrier"
           ]
         }
       ]
@@ -229,23 +240,31 @@ const Navbar = () => {
       name: "Réseau & Connectiques",
       columns: [
         {
-          title: "Offres spéciales",
+          title: "Réseau",
           items: [
-            "Packs économiques",
-            "Soldes",
-            "Dernières pièces",
-            "Remises volume",
-            "Anciens modèles"
+            "Switch / Routeurs / Point d'accès",
+            "Carte Réseau",
+            "Clé Wifi - Bluetooth",
+            "CPL",
+            "Coffrets et Armoires Réseau"
           ]
         },
         {
-          title: "Occasions",
+          title: "Câbles et Connectiques",
           items: [
-            "Reconditionnés",
-            "Démonstration",
-            "Retours magasin",
-            "Garantie étendue",
-            "Économisez jusqu'à 50%"
+            "Câbles HDMI",
+            "Câbles USB",
+            "Câbles Réseau",
+            "Câbles Firewire",
+            "Câbles Ecrans TV / AUDIO / DVD"
+          ]
+        },
+        {
+          title: "Coffrets et Accessoires",
+          items: [
+            "Coffrets et Armoires Réseau",
+            "Accessoires",
+            
           ]
         }
       ]
