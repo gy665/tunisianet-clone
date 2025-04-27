@@ -64,3 +64,136 @@
   color: #0066cc;
   font-weight: bold;
 }
+
+
+
+/* Carousel Styles */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden; /* This is CRUCIAL - hides anything outside container */
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background: white;
+}
+
+.slides-container {
+  width: 100%;
+  height: 100%;
+  position: relative; /* Changed from flex to allow absolute positioning */
+}
+
+.slides {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  width: 100%; /* Changed from min-width to ensure exact width */
+  height: 100%;
+  flex-shrink: 0; /* Prevents squeezing */
+  position: relative;
+}
+
+.slide img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Perfect centering */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+
+
+/* Add these new styles */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5); /* Dark grey background */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  border: none;
+  color: white;
+  font-size: 20px;
+  user-select: none;
+}
+
+.carousel-arrow.left {
+  left: 15px;
+}
+
+.carousel-arrow.right {
+  right: 15px;
+}
+
+.carousel:hover .carousel-arrow {
+  opacity: 1;
+}
+
+
+/* Keep all your existing styles for ads and products */
+.ads {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.ads img {
+  width: 49%;
+  border-radius: 4px;
+}
+
+.products h3 {
+  margin: 30px 0 15px;
+  font-size: 24px;
+  color: #333;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.product-card h4 {
+  margin: 10px 0;
+  color: #2a5ea7;
+}
+
+.product-card p {
+  color: #e63946;
+  font-weight: bold;
+}
