@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './Body.css';
 import Promotion from '../components/Promotions/Promotions';
 import Carousel from '../components/Carousel/Carousel';
 import Ads from '../components/Ads/Ads';
 
+
 const Body = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  
 
   const slides = [
     {
@@ -38,12 +39,7 @@ const Body = () => {
     }
   ];
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 3000);
-    return () => clearInterval(timer);
-  }, [slides.length]);
+ 
 
   return (
     <main className="body">
@@ -51,6 +47,7 @@ const Body = () => {
       <Promotion />
 
       <Ads />
+  
       
     </main>
   );

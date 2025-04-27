@@ -1,8 +1,222 @@
-.footer {
-  background-color: #0066cc;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  margin-top: 40px;
+.tunisianet-footer {
+  background-color: #1976d2;
+  width: 100%;
+  position: relative;
+  padding: 40px 0 20px; /* Keeping space for sections */
+}
+
+
+
+.social-container {
+  max-width: 1200px;
+  gap: 15px; /* Reduced gap to bring icons closer */
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+
+.social-icons {
+  display: flex;
+  gap: 5px; /* Reduced gap between icons */
+  margin-bottom: 10px;
+  align-items: center;
+  
+}
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #1976d2; /* Tunisianet blue */
+  transition: all 0.3s ease;
+}
+
+.social-icons img {
+  width: 20px; /* Icon size */
+  height: 20px;
+  filter: brightness(0) invert(1); /* Forces white color */
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: #ffeb3b; /* Yellow on hover */
+}
+
+.social-icons a:hover img {
+  filter: none; /* Remove filter to show original colors on hover */
+}
+
+/* Delivery Info Box Styles */
+.delivery-info-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+  z-index: 2;
+  display: flex;  /* Added flexbox to center content */
+  justify-content: center;
+}
+
+.delivery-info-box {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px 20px; /* Increased padding for more height */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  min-height: 120px; /* Reduced minimum height */
+  max-width: 1000px;
+}
+
+.delivery-features {
+  display: flex;
+  gap: 40px;
+}
+
+.delivery-feature {
+  display: flex;
+  flex-direction: column; /* Stack the image on top of the text */
+  align-items: center; /* Center the image and text */
+  gap: 10px; /* Adjust the gap between image and text */
+}
+
+.delivery-feature img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.feature-text h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+.feature-text p {
+  margin: 5px 0 0;
   font-size: 14px;
+  color: #666;
+}
+
+.delivery-note {
+  font-size: 12px;
+  color: #555;
+  text-align: right;
+  max-width: 30%;
+  font-style: italic;
+}
+
+
+
+
+
+
+
+.footer-columns-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 15px;
+  color: white;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-column h3 {
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 10px;
+}
+
+/* Styling the buttons */
+.footer-column button {
+  background: none;
+  color: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.3s, text-decoration 0.3s;
+  display: inline-block;
+}
+/* Add arrow pointing to the right */
+.footer-column button::before {
+  content: '>';
+  font-size: 14px;
+  margin-left: 8px;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.footer-column button:hover {
+  color: yellow;
+}
+  
+
+.footer-column address {
+  font-style: normal;
+  line-height: 1.6;
+}
+
+/* Styling the buttons in address */
+.footer-column address button {
+  background: none;
+  color: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.3s;
+}
+
+.footer-column address button:hover {
+  color: yellow;
+  
+}
+
+/* Copyright */
+.copyright {
+  border-top: 2px solid #ccc;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+
+
+@media (max-width: 480px) {
+  .footer-column {
+    flex: 0 0 100%;
+  }
 }
