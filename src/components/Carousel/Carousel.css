@@ -1,9 +1,18 @@
+/* Carousel Styles */
 .carousel {
     position: relative;
     width: 100%;
-    height: 400px; /* Adjust based on your needs */
-    overflow: hidden;
-    margin: 20px 0;
+    height: 400px;
+    overflow: hidden; /* This is CRUCIAL - hides anything outside container */
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background: white;
+  }
+  
+  .slides-container {
+    width: 100%;
+    height: 100%;
+    position: relative; /* Changed from flex to allow absolute positioning */
   }
   
   .slides {
@@ -13,44 +22,59 @@
   }
   
   .slide {
-    min-width: 100%;
+    width: 100%; /* Changed from min-width to ensure exact width */
+    height: 100%;
+    flex-shrink: 0; /* Prevents squeezing */
     position: relative;
   }
   
   .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .slide-title {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
     position: absolute;
-    bottom: 20px;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0,0,0,0.5);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
+    transform: translate(-50%, -50%); /* Perfect centering */
+    padding: 20px;
+    box-sizing: border-box;
   }
   
-  .dots {
+  
+  
+  
+  /* Add these new styles */
+  .carousel-arrow {
     position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 8px;
-  }
-  
-  .dot {
-    width: 12px;
-    height: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5); /* Dark grey background */
     border-radius: 50%;
-    background: rgba(255,255,255,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+    border: none;
+    color: white;
+    font-size: 20px;
+    user-select: none;
   }
   
-  .dot.active {
-    background: white;
+  .carousel-arrow.left {
+    left: 15px;
+  }
+  
+  .carousel-arrow.right {
+    right: 15px;
+  }
+  
+  .carousel:hover .carousel-arrow {
+    opacity: 1;
   }

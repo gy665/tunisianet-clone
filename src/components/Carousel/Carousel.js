@@ -1,39 +1,47 @@
+// src/components/Carousel/Carousel.js
 import React, { useState, useEffect } from 'react';
-import './Carousel.css';
+import './Carousel.css'; // We'll move the CSS too
 
 const Carousel = ({ slides }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 3000);
     return () => clearInterval(timer);
   }, [slides.length]);
 
   return (
-    <div className="carousel">
-      <div 
-        className="slides"
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+    <section className="carousel">
+      <div className="slides-container">
+        <div 
+          className="slides"
+          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+        >
+          {slides.map((slide, index) => (
+            <div key={index} className="slide">
+              <img src={slide.image} alt={slide.alt} />
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      <button 
+        className="carousel-arrow left"
+        onClick={() => setCurrentSlide(prev => (prev - 1 + slides.length) % slides.length)}
+        aria-label="Previous slide"
       >
-        {slides.map((slide, index) => (
-          <div key={index} className="slide">
-            <img src={slide.image} alt={`Promotion ${index + 1}`} />
-            {slide.title && <div className="slide-title">{slide.title}</div>}
-          </div>
-        ))}
-      </div>
-      <div className="dots">
-        {slides.map((_, index) => (
-          <span
-            key={index}
-            className={`dot ${index === currentIndex ? 'active' : ''}`}
-            onClick={() => setCurrentIndex(index)}
-          />
-        ))}
-      </div>
-    </div>
+        &#10094;
+      </button>
+      <button 
+        className="carousel-arrow right"
+        onClick={() => setCurrentSlide(prev => (prev + 1) % slides.length)}
+        aria-label="Next slide"
+      >
+        &#10095;
+      </button>
+    </section>
   );
 };
 

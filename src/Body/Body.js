@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Body.css';
 import Promotion from '../components/Promotions/Promotions';
+import Carousel from '../components/Carousel/Carousel';
+import Ads from '../components/Ads/Ads';
 
 const Body = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -45,46 +47,10 @@ const Body = () => {
 
   return (
     <main className="body">
-      {/* Carousel Section */}
-<section className="carousel">
-  <div className="slides-container">
-    <div 
-      className="slides"
-      style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-    >
-      {slides.map((slide, index) => (
-        <div key={index} className="slide">
-          <img src={slide.image} alt={slide.alt} />
-        </div>
-      ))}
-    </div>
-  </div>
-  
-  {/* Add these arrow buttons */}
-  <button 
-    className="carousel-arrow left"
-    onClick={() => setCurrentSlide(prev => (prev - 1 + slides.length) % slides.length)}
-    aria-label="Previous slide"
-  >
-    &#10094;
-  </button>
-  <button 
-    className="carousel-arrow right"
-    onClick={() => setCurrentSlide(prev => (prev + 1) % slides.length)}
-    aria-label="Next slide"
-  >
-    &#10095;
-  </button>
-  
-</section>
-<Promotion />
+      <Carousel slides={slides} />
+      <Promotion />
 
-      {/* Ads Section (unchanged) */}
-      <section className="ads">
-        <img src="https://www.tunisianet.com.tn/img/cms/banners-promo/promo1.jpg" alt="Pub 1" />
-        <img src="https://www.tunisianet.com.tn/img/cms/banners-promo/promo2.jpg" alt="Pub 2" />
-      </section>
-
+      <Ads />
       
     </main>
   );
